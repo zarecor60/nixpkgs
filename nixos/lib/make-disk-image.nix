@@ -453,9 +453,6 @@ let format' = format; in let
         tune2fs -T now ${optionalString deterministic "-U ${rootGUID}"} -c 0 -i 0 $rootDisk
       ''}
 
-      # Some tools assume these exist
-      ln -s vda /dev/xvda
-      ln -s vda /dev/sda
       # make systemd-boot find ESP without udev
       mkdir /dev/block
       ln -s /dev/vda1 /dev/block/254:1
