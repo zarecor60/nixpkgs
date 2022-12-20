@@ -303,6 +303,7 @@ let format' = format; in let
     [ rsync
       util-linux
       parted
+      gptfdisk
       e2fsprogs
       lkl
       config.system.build.nixos-install
