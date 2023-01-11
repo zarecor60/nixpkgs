@@ -12,7 +12,7 @@ let
     };
     latest = {
       version = "2.4.58.5";
-      sha256 = "";
+      sha256 = "sha256-UywxEGedXaBUTKojEkbkuejI6SdPSkPxTJMwUDNW6W0=";
       patches = [
         # Fix detection of TBB, see https://github.com/prusa3d/PrusaSlicer/issues/6355
         (fetchpatch {
