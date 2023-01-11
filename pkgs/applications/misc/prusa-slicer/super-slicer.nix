@@ -1,4 +1,4 @@
-{ lib, fetchFromGitHub, fetchpatch, makeDesktopItem, prusa-slicer, wxGTK31 }:
+{ lib, fetchFromGitHub, fetchpatch, makeDesktopItem, prusa-slicer, wxGTK31, pcre }:
 let
   appname = "SuperSlicer";
   pname = "super-slicer";
