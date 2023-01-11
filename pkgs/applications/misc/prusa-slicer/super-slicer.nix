@@ -52,7 +52,6 @@ let
     # See https://github.com/supermerill/SuperSlicer/issues/432
     cmakeFlags = super.cmakeFlags ++ [
       "-DSLIC3R_BUILD_TESTS=0"
-      "-DSLIC3R_WX_STABLE=1" 
       "-DSLIC3R_GTK=3"
     ];
 
