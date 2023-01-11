@@ -22,7 +22,13 @@ let
         # Fix compile error with boost 1.79. See https://github.com/supermerill/SuperSlicer/issues/2823
         (fetchpatch {
           url = "https://raw.githubusercontent.com/gentoo/gentoo/81e3ca3b7c131e8345aede89e3bbcd700e1ad567/media-gfx/superslicer/files/superslicer-2.4.58.3-boost-1.79-port-v2.patch";
-          sha256 = "sha256-xMbUjumPZ/7ulyRuBA76CwIv4BOpd+yKXCINSf58FxI=";
+          # Excludes Linux-only patches
+          excludes = [
+            "src/slic3r/GUI/FreeCADDialog.cpp"
+            "src/slic3r/GUI/Tab.cpp"
+            "src/slic3r/Utils/Http.cpp"
+          ];
+          sha256 = "sha256-v0q2MhySayij7+qBTE5q01IOq/DyUcWnjpbzB/AV34c=";
         })
       ];
     };
